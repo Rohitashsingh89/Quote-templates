@@ -44,7 +44,7 @@
         <cite class="quote-author" id="quote-author"></cite>
     </div>
 
-    <script>
+<!--     <script>
         // You can use JavaScript to dynamically change the quote and author.
         const quotes = [
             {
@@ -66,7 +66,7 @@
         quoteText.textContent = `"${randomQuote.text}"`;
         quoteAuthor.textContent = `- ${randomQuote.author}`;
 
-    </script>
+    </script> -->
 
     <script>
         const quoteText = document.getElementById('quote-text');
@@ -76,7 +76,7 @@
             try {
                 const response = await fetch('https://type.fit/api/quotes');
                 const data = await response.json();
-                console.log(data)
+                // console.log(data)
                 let rendomNum = Math.floor(Math.random() * data.length);
                 const quote = data[rendomNum].text;
                 const author = data[rendomNum].author;
